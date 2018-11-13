@@ -54,7 +54,7 @@ export default [
     path: '',
     name: 'doc',
     meta: {
-      title: '文档',
+      title: '在线文档',
       href: 'https://lison16.github.io/iview-admin-doc/#/',
       icon: 'ios-book'
     }
@@ -78,6 +78,25 @@ export default [
       }
     ]
   },
+    {
+    path: '/myTable',
+    name: 'myTable',
+    component: Main,
+    meta: {
+      hideInBread: true
+    },
+    children: [
+      {
+        path: 'myTable',
+        name: 'myTable',
+        meta: {
+          icon: '_qq',
+          title: 'test'
+        },
+        component: () => import('@/view/myTable/myTable.vue')
+      }
+    ]
+  },
   {
     path: '/components',
     name: 'components',
@@ -92,7 +111,7 @@ export default [
         name: 'count_to_page',
         meta: {
           icon: 'md-trending-up',
-          title: '数字渐变'
+          title: '数字渐变2'
         },
         component: () => import('@/view/components/count-to/count-to.vue')
       },
@@ -101,7 +120,7 @@ export default [
         name: 'drag_list_page',
         meta: {
           icon: 'ios-infinite',
-          title: '拖拽列表'
+          title: '拖拽列表2'
         },
         component: () => import('@/view/components/drag-list/drag-list.vue')
       },
@@ -110,7 +129,7 @@ export default [
         name: 'tables_page',
         meta: {
           icon: 'md-grid',
-          title: '多功能表格'
+          title: '多功能表格2'
         },
         component: () => import('@/view/components/tables/tables.vue')
       },
@@ -119,7 +138,7 @@ export default [
         name: 'split_pane_page',
         meta: {
           icon: 'md-pause',
-          title: '分割窗口'
+          title: '分割窗口2'
         },
         component: () => import('@/view/components/split-pane/split-pane.vue')
       },
@@ -243,7 +262,7 @@ export default [
         name: 'i18n_page',
         meta: {
           icon: 'md-planet',
-          title: 'i18n - {{ i18n_page }}'
+          title: '多语言'
         },
         component: () => import('@/view/i18n/i18n-page.vue')
       }
